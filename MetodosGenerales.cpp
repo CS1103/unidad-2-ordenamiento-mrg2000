@@ -8,12 +8,12 @@
 #include "Record.h"
 #include <sstream>
 #include "Split.h"
+#include "MetodosGenerales.h"
 
 
 vector <Record> VectorRecords(){
-    ifstream datos;
-    datos.open("info.csv",ios::in);
-
+    fstream datos;
+    AbreArchivo("info.csv",datos,ios::in);
 
     TipoCadena linea;
     vector <Record> vectorRecords;
@@ -50,3 +50,27 @@ vector <Record> VectorRecords(){
 
     return vectorRecords;
 }
+
+
+
+void AbreArchivo(TipoCadena nombreFisico, std::fstream &archivo, ios_base::openmode modo)
+{//-------------------------------------------------------------------------------------
+    archivo.open(nombreFisico,modo);
+    if(!archivo.is_open())
+    {
+        cout << "Error no se puedo abrir el archivo";
+        exit(EXIT_FAILURE);
+    }
+}
+
+
+
+ostream &operator<<(ostream& os, vector <Record> vec){
+
+    os << "Pais,"<< "Ano,"<< "Codigo,"<< "Commodity,"<< "Flujo,"<< "Trade,"<< "Peso,"<< "SioNoCantidad,"<< "Cantidad,"<< "Categoria" << endl;
+    for(TipoEntero i=0;i<vec.size();i++){
+        os << vec[i].getPais() << "," << vec[i].getAno() << "," << vec[i].getCodigo() << "," << vec[i].getCommodity() << "," << vec[i].getFlujo() << "," << vec[i].getTrade() << "," << vec[i].getPeso() << "," << vec[i].isSiNoCantidad() << "," << vec[i].getCantidad() << "," << vec[i].getCategoria() << "\n";
+    }
+    return os;
+}
+
