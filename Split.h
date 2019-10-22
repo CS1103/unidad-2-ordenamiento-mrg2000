@@ -1,14 +1,18 @@
+//
+// Created by chuse on 3/10/2019.
+//
+
+
+#ifndef PROYECTO2FINAL_SPLIT_H
+#define PROYECTO2FINAL_SPLIT_H
+
 #include <iostream>
 #include <vector>
 #include "Definiciones.h"
 #include "Record.h"
 
-
-
 using namespace std;
 
-#ifndef LIFESAVER_SPLIT_H
-#define LIFESAVER_SPLIT_H
 
 
 // SPLIT LINEAS
@@ -21,4 +25,4 @@ std::vector<std::string> _explode(const std::string& pattern, std::string data);
 
 
 
-#endif //LIFESAVER_SPLIT_H
+#endif //PROYECTO2FINAL_SPLIT_H

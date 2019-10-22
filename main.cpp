@@ -3,12 +3,12 @@
 #include "Definiciones.h"
 #include "Split.h"
 #include "Record.h"
-#include "MetodosGenerales.h"
-#include "MaxHeap.h"
+#include "Generales.h"
+#include "HeapSort.h"
 #include <algorithm>
-#include "Merge.h"
-#include "Shell.h"
-#include "Quick.h"
+#include "MergeSort.h"
+#include "ShellSort.h"
+#include "QuickSort.h"
 
 using namespace std;
 
@@ -16,25 +16,16 @@ using namespace std;
 
 int main() {
 
-
     vector <Record> records = VectorRecords();
-
-
-
     MaxHeap(records,false);
     ImprimirArchivo("MaxHeap1.csv",records);
     MaxHeap(records,true);
     ImprimirArchivo("MaxHeap2.csv",records);
-
-
     shell_sort(records);
     ImprimirArchivo("Shell1.csv",records);
-    shell_sort(records,true);
-    ImprimirArchivo("Shell2.csv",records);
-
-
+    merge_sort(records);
+    ImprimirArchivo("Merge1.csv", records);
     quick_sort(records,2,3);
     ImprimirArchivo("Quick1.csv",records);
-
     return 0;
 }

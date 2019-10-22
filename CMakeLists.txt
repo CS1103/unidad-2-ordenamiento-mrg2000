@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 3.12)
-project(Proyecto_2_Ordenamiento)
+cmake_minimum_required(VERSION 3.12.2)
+project(Proyecto2Final)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(unidad-2-ordenamiento-mrg2000 main.cpp Record.h Record.cpp Split.h Split.cpp Definiciones.h MetodosGenerales.h MetodosGenerales.cpp MaxHeap.h MaxHeap.cpp Merge.h Quick.h Shell.h)
+add_executable(Proyecto2Final main.cpp Definiciones.h HeapSort.h ShellSort.h MergeSort.h QuickSort.h Record.cpp Record.h Generales.cpp Generales.h Split.cpp Split.h)

@@ -1,6 +1,10 @@
+//
+// Created by chuse on 3/10/2019.
+//
 
-#ifndef PROYECTO_2_ORDENAMIENTO_RECORD_H
-#define PROYECTO_2_ORDENAMIENTO_RECORD_H
+#ifndef PROYECTO2FINAL_RECORD_H
+#define PROYECTO2FINAL_RECORD_H
+
 
 #include "Definiciones.h"
 
@@ -51,4 +55,4 @@ public:
 };
 
 
-#endif //PROYECTO_2_ORDENAMIENTO_RECORD_H
+#endif //PROYECTO2FINAL_RECORD_H
